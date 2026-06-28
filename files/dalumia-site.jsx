@@ -126,19 +126,19 @@ export default function DalumiaWebsite() {
 
   const blogPosts = [
     {
-      title: 'Por que dados são o novo petróleo para sua empresa',
-      excerpt: 'Exploramos como estruturar dados para tomar decisões estratégicas...',
-      date: 'Nov 2024'
+      title: 'Como separar finanças pessoais e do negócio sendo MEI',
+      excerpt: 'Um dos erros mais comuns do microempreendedor é misturar as contas. Veja como estruturar isso de forma simples e prática.',
+      date: 'Jun 2026'
     },
     {
-      title: 'MEI e BI: como começar pequeno',
-      excerpt: 'Um guia prático para microempreendedores que querem usar dados...',
-      date: 'Out 2024'
+      title: 'DRE Gerencial: o que é e por que sua empresa precisa',
+      excerpt: 'O Demonstrativo de Resultado do Exercício gerencial revela a saúde real do seu negócio. Aprenda a ler e usar a seu favor.',
+      date: 'Mai 2026'
     },
     {
-      title: 'Transformação digital não é só tecnologia',
-      excerpt: 'O que realmente importa na jornada de transformação de dados...',
-      date: 'Set 2024'
+      title: 'Fluxo de caixa: como projetar os próximos 3 meses',
+      excerpt: 'Antecipar entradas e saídas evita surpresas e permite decisões mais seguras. Veja um modelo prático para começar hoje.',
+      date: 'Abr 2026'
     }
   ];
 
@@ -165,6 +165,7 @@ export default function DalumiaWebsite() {
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
             <a href="#servicos" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '0.95rem' }}>Serviços</a>
             <a href="#sobre" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '0.95rem' }}>Sobre</a>
+            <a href="#blog" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '0.95rem' }}>Blog</a>
             <a href="#faq" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '0.95rem' }}>FAQ</a>
             <a href="#contato" style={{
               background: '#D4AF37',
@@ -203,6 +204,7 @@ export default function DalumiaWebsite() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <a href="#servicos" style={{ color: '#FFFFFF', textDecoration: 'none' }}>Serviços</a>
             <a href="#sobre" style={{ color: '#FFFFFF', textDecoration: 'none' }}>Sobre</a>
+            <a href="#blog" style={{ color: '#FFFFFF', textDecoration: 'none' }}>Blog</a>
             <a href="#faq" style={{ color: '#FFFFFF', textDecoration: 'none' }}>FAQ</a>
             <a href="#contato" style={{
               background: '#D4AF37',
@@ -234,13 +236,23 @@ export default function DalumiaWebsite() {
           Dados que Fazem <span style={{ color: '#D4AF37' }}>Diferença</span>
         </h1>
         <p style={{
-          fontSize: '1.25rem',
+          fontSize: '0.9rem',
+          fontWeight: '600',
+          letterSpacing: '2px',
+          color: '#D4AF37',
+          textTransform: 'uppercase',
+          marginBottom: '1rem'
+        }}>
+          Consultoria Financeira & Estratégia Operacional
+        </p>
+        <p style={{
+          fontSize: '1.2rem',
           maxWidth: '600px',
           margin: '0 auto 2rem',
-          lineHeight: '1.6',
+          lineHeight: '1.7',
           color: '#E8E8E8'
         }}>
-          Consultoria em Data Science & Analytics para empresas que querem crescer com inteligência de dados.
+          Para pessoas físicas, MEI e pequenas empresas que querem organizar as finanças e crescer com decisões baseadas em dados.
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <a href="#servicos" style={{
@@ -530,7 +542,7 @@ export default function DalumiaWebsite() {
       </section>
 
       {/* Blog Preview */}
-      <section style={{
+      <section id="blog" style={{
         padding: '5rem 2rem',
         background: '#FFFFFF'
       }}>
@@ -538,9 +550,12 @@ export default function DalumiaWebsite() {
           <h2 style={{
             fontSize: '2.5rem',
             fontWeight: '700',
-            marginBottom: '3rem',
+            marginBottom: '0.75rem',
             color: '#0F1419'
-          }}>Blog</h2>
+          }}>Blog & Conteúdo</h2>
+          <p style={{ color: '#666', fontSize: '1rem', marginBottom: '3rem' }}>
+            Dicas práticas de finanças para quem tem um negócio ou quer organizar a vida financeira.
+          </p>
 
           <div style={{
             display: 'grid',
@@ -719,7 +734,7 @@ export default function DalumiaWebsite() {
           © 2026 Dalumia Consultoria. Todos os direitos reservados.
         </p>
         <p style={{ margin: '0.5rem 0', color: '#D4AF37' }}>
-          Especialista em Data Science & Analytics
+          Consultoria Financeira & Estratégia Operacional
         </p>
       </footer>
     </div>
