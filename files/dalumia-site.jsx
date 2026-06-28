@@ -395,32 +395,48 @@ export default function DalumiaWebsite() {
           <h2 style={{
             fontSize: '2.5rem',
             fontWeight: '700',
-            marginBottom: '2rem',
+            marginBottom: '1rem',
             color: '#0F1419'
           }}>Sobre a Dalumia</h2>
+
+          <p style={{
+            fontSize: '1.05rem',
+            lineHeight: '1.8',
+            color: '#555',
+            marginBottom: '2.5rem',
+            maxWidth: '700px'
+          }}>
+            A Dalumia nasceu da convicção de que toda empresa — do MEI à empresa consolidada — merece tomar decisões baseadas em dados reais. Combinamos formação em Administração, MBA em Data Science & Analytics e vivência prática com empreendedores para entregar consultoria financeira acessível e eficaz.
+          </p>
 
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '2rem',
+            gap: '1.5rem',
             marginBottom: '3rem'
           }}>
-            <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px' }}>
-              <h3 style={{ color: '#D4AF37', fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.5rem' }}>Expertise</h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: '#555' }}>
-                10+ anos de experiência em Data Science, BI e analytics. Certificações em Data Science e MBA em Analytics.
+            <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px', borderLeft: '3px solid #D4AF37' }}>
+              <h3 style={{ color: '#D4AF37', fontSize: '1.05rem', fontWeight: '700', marginBottom: '0.5rem' }}>🎓 Formação</h3>
+              <p style={{ fontSize: '0.93rem', lineHeight: '1.7', color: '#555', margin: 0 }}>
+                Administração · MBA em Data Science & Analytics · cursando Contabilidade. Visão integrada de negócio, dados e finanças.
               </p>
             </div>
-            <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px' }}>
-              <h3 style={{ color: '#D4AF37', fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.5rem' }}>Metodologia</h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: '#555' }}>
-                Abordagem consultiva e data-driven. Entendemos seu negócio antes de prescrever soluções.
+            <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px', borderLeft: '3px solid #D4AF37' }}>
+              <h3 style={{ color: '#D4AF37', fontSize: '1.05rem', fontWeight: '700', marginBottom: '0.5rem' }}>💼 Experiência</h3>
+              <p style={{ fontSize: '0.93rem', lineHeight: '1.7', color: '#555', margin: 0 }}>
+                3 a 5 anos em consultoria financeira para MEI e pequenas empresas. Atuação no Sebrae com contato direto à realidade do empreendedor brasileiro.
               </p>
             </div>
-            <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px' }}>
-              <h3 style={{ color: '#D4AF37', fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.5rem' }}>Stack</h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: '#555' }}>
-                Python, SQL, Power BI, Excel avançado. Buscamos ferramentas que se encaixam no seu contexto.
+            <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px', borderLeft: '3px solid #D4AF37' }}>
+              <h3 style={{ color: '#D4AF37', fontSize: '1.05rem', fontWeight: '700', marginBottom: '0.5rem' }}>✨ Diferenciais</h3>
+              <p style={{ fontSize: '0.93rem', lineHeight: '1.7', color: '#555', margin: 0 }}>
+                Combinação rara de dados + contabilidade + negócio. Ferramentas acessíveis (Excel, Python, Power BI) sem complexidade desnecessária. Suporte real pós-projeto.
+              </p>
+            </div>
+            <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px', borderLeft: '3px solid #D4AF37' }}>
+              <h3 style={{ color: '#D4AF37', fontSize: '1.05rem', fontWeight: '700', marginBottom: '0.5rem' }}>📍 Atendimento</h3>
+              <p style={{ fontSize: '0.93rem', lineHeight: '1.7', color: '#555', margin: 0 }}>
+                Presencial em São Paulo · Online para todo o Brasil. Reuniões via Google Meet ou Zoom, com flexibilidade de horário.
               </p>
             </div>
           </div>
@@ -433,7 +449,7 @@ export default function DalumiaWebsite() {
             textAlign: 'center'
           }}>
             <p style={{ fontSize: '1.1rem', margin: '0 0 1rem 0', fontWeight: '500' }}>
-              Pronto para estruturar dados que trazem resultados?
+              Pronto para crescer com quem entende de negócio e de dados?
             </p>
             <a href="#contato" style={{
               background: '#0F1419',
