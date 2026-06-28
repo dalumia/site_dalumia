@@ -436,7 +436,7 @@ export default function DalumiaWebsite() {
             <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px', borderLeft: '3px solid #D4AF37' }}>
               <h3 style={{ color: '#D4AF37', fontSize: '1.05rem', fontWeight: '700', marginBottom: '0.5rem' }}>💼 Experiência</h3>
               <p style={{ fontSize: '0.93rem', lineHeight: '1.7', color: '#555', margin: 0 }}>
-                3 a 5 anos em consultoria financeira para MEI e pequenas empresas, com contato direto à realidade do empreendedor brasileiro.
+                Profissional em análise de dados e consultoria financeira com 3+ anos de experiência prática. Histórico em projetos de BI e análise financeira, combinado com atendimento direto a microempreendedores na formalização, gestão tributária e planejamento. Vivência com a realidade operacional: desde constituição até estratégia fiscal com fluxo de caixa restrito.
               </p>
             </div>
             <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px', borderLeft: '3px solid #D4AF37' }}>
