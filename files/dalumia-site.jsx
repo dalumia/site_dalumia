@@ -21,40 +21,80 @@ export default function DalumiaWebsite() {
     setContactForm({ name: '', email: '', message: '' });
   };
 
-  const segments = [
+  const serviceCategories = [
     {
-      name: 'MEI',
+      category: 'Análise Financeira Pessoal',
+      icon: '💰',
+      services: [
+        {
+          name: 'Análise financeira pessoal',
+          description: 'Diagnóstico completo, mapeamento de receitas/despesas, planejamento de reserva e investimentos.',
+          price: 'R$ 400 – R$ 800',
+        },
+        {
+          name: 'Consultoria para MEI',
+          description: 'Separação finanças pessoais/negócio, controle de caixa, análise de lucratividade e tributação.',
+          price: 'R$ 500 – R$ 1.000',
+        },
+        {
+          name: 'Fluxo de caixa e DRE gerencial',
+          description: 'Estruturação, projeções mensais, análise de desvios e recomendações de ação.',
+          price: 'R$ 600 – R$ 1.200',
+        },
+        {
+          name: 'Acompanhamento mensal recorrente',
+          description: 'Reuniões mensais, análise de indicadores-chave, revisão de metas, suporte contínuo.',
+          price: 'R$ 800 – R$ 1.500',
+        },
+        {
+          name: 'Planejamento financeiro anual',
+          description: 'Orçamento integrado, metas, projeção de crescimento, revisão trimestral.',
+          price: 'R$ 900 – R$ 1.800',
+        },
+      ]
+    },
+    {
+      category: 'Consultoria Financeira',
       icon: '📊',
-      description: 'Para microempreendedores que querem dados estruturados e decisões assertivas.',
-      color: '#D4AF37',
-      tiers: [
-        { title: 'Diagnosis', price: 'R$ 500', desc: 'Análise inicial de dados e processos' },
-        { title: 'Planning', price: 'R$ 1.200', desc: 'Estruturação de dashboards e KPIs' },
-        { title: 'Implementation', price: 'Sob demanda', desc: 'Implementação completa com suporte' },
+      services: [
+        {
+          name: 'Diagnóstico operacional',
+          description: 'Mapeamento de processos, identificação de gargalos, plano de melhoria.',
+          price: 'R$ 800 – R$ 1.500',
+        },
+        {
+          name: 'Precificação de produtos/serviços',
+          description: 'Cálculo de custos, ponto de equilíbrio, margens, política de preços.',
+          price: 'R$ 600 – R$ 1.200',
+        },
+        {
+          name: 'Reestruturação de dívidas',
+          description: 'Análise de endividamento, estratégias de quitação, orientações de renegociação.',
+          price: 'R$ 500 – R$ 1.000',
+        },
+        {
+          name: 'Consultoria de BI / Dashboards',
+          description: 'Desenvolvimento de painéis analíticos com Power BI, complementando análise financeira.',
+          price: 'R$ 800 – R$ 3.000',
+        },
+        {
+          name: 'Otimização de processos',
+          description: 'Reengenharia de fluxos, automação com ferramentas digitais, treinamento de equipe.',
+          price: 'R$ 1.200 – R$ 3.500',
+        },
       ]
     },
     {
-      name: 'ME/EPP',
-      icon: '📈',
-      description: 'Para pequenas e médias empresas em crescimento que precisam escalar com inteligência de dados.',
-      color: '#D4AF37',
-      tiers: [
-        { title: 'Diagnosis', price: 'R$ 1.500', desc: 'Auditoria de dados e processos' },
-        { title: 'Planning', price: 'R$ 3.500', desc: 'Modelagem de BI e automação' },
-        { title: 'Implementation', price: 'Sob demanda', desc: 'Implementação, treinamento e suporte contínuo' },
-      ]
-    },
-    {
-      name: 'Enterprise',
+      category: 'Estratégia Operacional (Projetos)',
       icon: '🏢',
-      description: 'Para empresas consolidadas que buscam otimização estratégica e transformação digital.',
-      color: '#D4AF37',
-      tiers: [
-        { title: 'Diagnosis', price: 'A consultar', desc: 'Análise estratégica completa' },
-        { title: 'Planning', price: 'A consultar', desc: 'Roadmap de transformação de dados' },
-        { title: 'Implementation', price: 'A consultar', desc: 'Implementação, governance e otimização' },
+      services: [
+        {
+          name: 'Projeto sob demanda',
+          description: 'Escopo personalizado conforme a necessidade da empresa. Entre em contato para desenharmos juntos a melhor solução.',
+          price: 'A consultar',
+        },
       ]
-    }
+    },
   ];
 
   const faqItems = [
@@ -227,73 +267,117 @@ export default function DalumiaWebsite() {
             fontSize: '2.5rem',
             fontWeight: '700',
             textAlign: 'center',
-            marginBottom: '3rem',
+            marginBottom: '0.75rem',
             color: '#0F1419'
-          }}>Serviços por Segmento</h2>
+          }}>Nossos Serviços</h2>
+          <p style={{
+            textAlign: 'center',
+            color: '#666',
+            fontSize: '1rem',
+            marginBottom: '4rem'
+          }}>Escolha o serviço ideal para o seu momento</p>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '2rem'
-          }}>
-            {segments.map((segment, idx) => (
-              <div key={idx} style={{
-                background: '#FFFFFF',
-                borderRadius: '12px',
-                padding: '2rem',
-                boxShadow: '0 4px 6px rgba(0,0,0,0.08)',
-                borderTop: `4px solid ${segment.color}`
+          {serviceCategories.map((cat, catIdx) => (
+            <div key={catIdx} style={{ marginBottom: '4rem' }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.75rem',
+                marginBottom: '1.75rem',
+                paddingBottom: '0.75rem',
+                borderBottom: '2px solid #D4AF37'
               }}>
-                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>{segment.icon}</div>
+                <span style={{ fontSize: '1.75rem' }}>{cat.icon}</span>
                 <h3 style={{
-                  fontSize: '1.75rem',
+                  fontSize: '1.35rem',
                   fontWeight: '700',
-                  marginBottom: '0.5rem',
-                  color: '#0F1419'
-                }}>{segment.name}</h3>
-                <p style={{
-                  fontSize: '0.95rem',
-                  color: '#555',
-                  marginBottom: '1.5rem',
-                  lineHeight: '1.6'
-                }}>{segment.description}</p>
-
-                <div style={{ borderTop: '1px solid #E0E0E0', paddingTop: '1.5rem' }}>
-                  {segment.tiers.map((tier, tierIdx) => (
-                    <div key={tierIdx} style={{
-                      marginBottom: '1rem',
-                      paddingBottom: '1rem',
-                      borderBottom: tierIdx < segment.tiers.length - 1 ? '1px solid #F0F0F0' : 'none'
-                    }}>
-                      <div style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'start',
-                        marginBottom: '0.5rem'
-                      }}>
-                        <h4 style={{
-                          fontSize: '1rem',
-                          fontWeight: '600',
-                          color: '#0F1419',
-                          margin: 0
-                        }}>{tier.title}</h4>
-                        <span style={{
-                          fontSize: '0.9rem',
-                          fontWeight: '700',
-                          color: '#D4AF37'
-                        }}>{tier.price}</span>
-                      </div>
-                      <p style={{
-                        fontSize: '0.85rem',
-                        color: '#777',
-                        margin: 0
-                      }}>{tier.desc}</p>
-                    </div>
-                  ))}
-                </div>
+                  color: '#0F1419',
+                  margin: 0
+                }}>{cat.category}</h3>
               </div>
-            ))}
-          </div>
+
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+                gap: '1.5rem'
+              }}>
+                {cat.services.map((service, sIdx) => (
+                  <div key={sIdx} style={{
+                    background: '#FFFFFF',
+                    borderRadius: '12px',
+                    padding: '1.75rem',
+                    boxShadow: '0 2px 12px rgba(0,0,0,0.07)',
+                    border: '1px solid #E8E8E8',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    transition: 'transform 0.2s, box-shadow 0.2s'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-4px)';
+                    e.currentTarget.style.boxShadow = '0 8px 24px rgba(212,175,55,0.18)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,0,0,0.07)';
+                  }}
+                  >
+                    <div>
+                      <h4 style={{
+                        fontSize: '1.05rem',
+                        fontWeight: '700',
+                        color: '#0F1419',
+                        marginBottom: '0.75rem',
+                        lineHeight: '1.4'
+                      }}>{service.name}</h4>
+                      <p style={{
+                        fontSize: '0.88rem',
+                        color: '#666',
+                        lineHeight: '1.6',
+                        marginBottom: '1.5rem'
+                      }}>{service.description}</p>
+                    </div>
+
+                    <div>
+                      <div style={{
+                        background: '#F8FAFC',
+                        borderRadius: '8px',
+                        padding: '0.75rem 1rem',
+                        marginBottom: '1rem',
+                        textAlign: 'center'
+                      }}>
+                        <span style={{
+                          fontSize: '1.25rem',
+                          fontWeight: '800',
+                          color: '#D4AF37',
+                          letterSpacing: '-0.5px'
+                        }}>{service.price}</span>
+                      </div>
+                      <a
+                        href="#contato"
+                        style={{
+                          display: 'block',
+                          textAlign: 'center',
+                          background: '#0F1419',
+                          color: '#D4AF37',
+                          padding: '0.65rem 1rem',
+                          borderRadius: '6px',
+                          textDecoration: 'none',
+                          fontWeight: '600',
+                          fontSize: '0.9rem',
+                          transition: 'background 0.2s'
+                        }}
+                        onMouseEnter={(e) => e.currentTarget.style.background = '#D4AF37'}
+                        onMouseLeave={(e) => e.currentTarget.style.background = '#0F1419'}
+                      >
+                        Solicitar serviço
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
