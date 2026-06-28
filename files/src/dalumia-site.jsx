@@ -99,24 +99,28 @@ export default function DalumiaWebsite() {
 
   const faqItems = [
     {
-      q: 'Qual é a diferença entre Diagnosis, Planning e Implementation?',
-      a: 'Diagnosis é uma análise do seu contexto atual. Planning estrutura a estratégia de dados e ferramentas. Implementation executa e mantém a solução em funcionamento.'
+      q: 'Como funciona o processo de consultoria?',
+      a: 'Começamos com uma conversa diagnóstica para entender seu momento financeiro. A partir daí, traçamos um plano personalizado — seja para organização pessoal, MEI ou empresa — com etapas claras e prazos definidos.'
     },
     {
-      q: 'Posso começar com Diagnosis e depois expandir?',
-      a: 'Sim! Na verdade recomendamos isso. Começamos pequeno, você entende o valor, e expandimos conforme necessário.'
+      q: 'Posso contratar apenas um serviço ou preciso de um pacote?',
+      a: 'Cada serviço pode ser contratado individualmente. Recomendamos começar pelo diagnóstico, mas você escolhe o que faz mais sentido para o seu momento.'
     },
     {
-      q: 'Trabalham com qual stack tecnológico?',
-      a: 'Excel, Python, SQL, Power BI e ferramentas low-code. Nos adaptamos às suas necessidades e infraestrutura.'
+      q: 'Com quem a Dalumia trabalha?',
+      a: 'Atendemos pessoas físicas, MEI e pequenas empresas que querem organizar as finanças, crescer com segurança ou tomar decisões mais embasadas em dados.'
     },
     {
       q: 'Qual o prazo típico de um projeto?',
-      a: 'Diagnosis: 2-4 semanas. Planning: 4-8 semanas. Implementation: depende do escopo, mas começamos a entregar valor rapidamente.'
+      a: 'Diagnóstico: 1 a 2 semanas. Planejamento e estruturação: 2 a 4 semanas. O acompanhamento mensal recorrente é contínuo e renovável a cada período.'
     },
     {
-      q: 'Oferecem suporte após a implementação?',
-      a: 'Sim. Suporte pós-launch está incluído em todos os nossos serviços, com opção de manutenção contínua.'
+      q: 'As reuniões são online ou presenciais?',
+      a: 'Trabalhamos principalmente online (Google Meet / Zoom), o que nos permite atender clientes em todo o Brasil. Presencial em São Paulo mediante agendamento.'
+    },
+    {
+      q: 'Os valores informados são fixos?',
+      a: 'Os valores apresentados são faixas de referência. O valor exato depende do escopo e da complexidade do seu caso. Entre em contato para um orçamento personalizado sem compromisso.'
     },
   ];
 
@@ -157,7 +161,7 @@ export default function DalumiaWebsite() {
           DALUMIA
         </div>
         
-        <div style={{ display: 'none' }} className="desktop-menu" >
+        <div className="desktop-menu" style={{ alignItems: 'center' }}>
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
             <a href="#servicos" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '0.95rem' }}>Serviços</a>
             <a href="#sobre" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '0.95rem' }}>Sobre</a>
@@ -175,6 +179,7 @@ export default function DalumiaWebsite() {
 
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="mobile-toggle"
           style={{
             background: 'none',
             border: 'none',
@@ -695,7 +700,7 @@ export default function DalumiaWebsite() {
         fontSize: '0.85rem'
       }}>
         <p style={{ margin: '0.5rem 0' }}>
-          © 2024 Dalumia Consultoria. Todos os direitos reservados.
+          © 2026 Dalumia Consultoria. Todos os direitos reservados.
         </p>
         <p style={{ margin: '0.5rem 0', color: '#D4AF37' }}>
           Especialista em Data Science & Analytics
