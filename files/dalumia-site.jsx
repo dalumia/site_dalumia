@@ -418,7 +418,7 @@ export default function DalumiaWebsite() {
             marginBottom: '2.5rem',
             maxWidth: '700px'
           }}>
-            A Dalumia nasceu da convicção de que toda empresa — do MEI à empresa consolidada — merece tomar decisões baseadas em dados reais. Combinamos formação em Administração, MBA em Data Science & Analytics e vivência prática com empreendedores para entregar consultoria financeira acessível e eficaz.
+            Nascemos da convicção de que toda empresa merece acesso a decisões inteligentes baseadas em dados. Combinamos formação contábil, MBA em Data Science & Analytics e vivência profunda com empreendedores de verdade para entregar consultoria financeira que é acessível, clara e eficaz.
           </p>
 
           <div style={{
@@ -436,7 +436,7 @@ export default function DalumiaWebsite() {
             <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px', borderLeft: '3px solid #D4AF37' }}>
               <h3 style={{ color: '#D4AF37', fontSize: '1.05rem', fontWeight: '700', marginBottom: '0.5rem' }}>💼 Experiência</h3>
               <p style={{ fontSize: '0.93rem', lineHeight: '1.7', color: '#555', margin: 0 }}>
-                3 a 5 anos em consultoria financeira para MEI e pequenas empresas. Atuação no Sebrae com contato direto à realidade do empreendedor brasileiro.
+                3 a 5 anos em consultoria financeira para MEI e pequenas empresas, com contato direto à realidade do empreendedor brasileiro.
               </p>
             </div>
             <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px', borderLeft: '3px solid #D4AF37' }}>
