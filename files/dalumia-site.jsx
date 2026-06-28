@@ -448,7 +448,7 @@ export default function DalumiaWebsite() {
             <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px', borderLeft: '3px solid #D4AF37' }}>
               <h3 style={{ color: '#D4AF37', fontSize: '1.05rem', fontWeight: '700', marginBottom: '0.5rem' }}>📍 Atendimento</h3>
               <p style={{ fontSize: '0.93rem', lineHeight: '1.7', color: '#555', margin: 0 }}>
-                Presencial em São Paulo · Online para todo o Brasil. Reuniões via Google Meet ou Zoom, com flexibilidade de horário.
+                <strong>Presencial em São Paulo · Online para todo o Brasil.</strong> Atendimento por Google Meet, Zoom ou Microsoft Teams, com flexibilidade de horário para se adaptar ao seu negócio.
               </p>
             </div>
           </div>
