@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Site profissional Dalumia - Consultoria em Data Science & Analytics",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

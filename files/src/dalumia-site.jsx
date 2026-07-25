@@ -21,132 +21,92 @@ export default function DalumiaWebsite() {
     setContactForm({ name: '', email: '', message: '' });
   };
 
-  const serviceCategories = [
+  const services = [
     {
-      category: 'Análise Financeira Pessoal',
-      icon: '💰',
-      services: [
-        {
-          name: 'Análise financeira pessoal',
-          description: 'Diagnóstico completo, mapeamento de receitas/despesas, planejamento de reserva e investimentos.',
-          price: 'R$ 400 – R$ 800',
-        },
-        {
-          name: 'Consultoria para MEI',
-          description: 'Separação finanças pessoais/negócio, controle de caixa, análise de lucratividade e tributação.',
-          price: 'R$ 500 – R$ 1.000',
-        },
-        {
-          name: 'Fluxo de caixa e DRE gerencial',
-          description: 'Estruturação, projeções mensais, análise de desvios e recomendações de ação.',
-          price: 'R$ 600 – R$ 1.200',
-        },
-        {
-          name: 'Acompanhamento mensal recorrente',
-          description: 'Reuniões mensais, análise de indicadores-chave, revisão de metas, suporte contínuo.',
-          price: 'R$ 800 – R$ 1.500',
-        },
-        {
-          name: 'Planejamento financeiro anual',
-          description: 'Orçamento integrado, metas, projeção de crescimento, revisão trimestral.',
-          price: 'R$ 900 – R$ 1.800',
-        },
-      ]
+      title: 'Diagnóstico Financeiro',
+      description: 'Avaliação completa da situação financeira da empresa.',
+      bullets: ['Fluxo de caixa', 'Receitas e despesas', 'Custos', 'Rentabilidade', 'Principais riscos']
     },
     {
-      category: 'Consultoria Financeira',
-      icon: '📊',
-      services: [
-        {
-          name: 'Diagnóstico operacional',
-          description: 'Mapeamento de processos, identificação de gargalos, plano de melhoria.',
-          price: 'R$ 800 – R$ 1.500',
-        },
-        {
-          name: 'Precificação de produtos/serviços',
-          description: 'Cálculo de custos, ponto de equilíbrio, margens, política de preços.',
-          price: 'R$ 600 – R$ 1.200',
-        },
-        {
-          name: 'Reestruturação de dívidas',
-          description: 'Análise de endividamento, estratégias de quitação, orientações de renegociação.',
-          price: 'R$ 500 – R$ 1.000',
-        },
-        {
-          name: 'Consultoria de BI / Dashboards',
-          description: 'Desenvolvimento de painéis analíticos com Power BI, complementando análise financeira.',
-          price: 'R$ 800 – R$ 3.000',
-        },
-        {
-          name: 'Otimização de processos',
-          description: 'Reengenharia de fluxos, automação com ferramentas digitais, treinamento de equipe.',
-          price: 'R$ 1.200 – R$ 3.500',
-        },
-      ]
+      title: 'Controle Financeiro',
+      description: 'Implantação de controles com organização e clareza para tomada de decisão.',
+      bullets: ['Contas a pagar', 'Contas a receber', 'Fluxo de caixa', 'Conciliação bancária', 'Planejamento financeiro']
     },
     {
-      category: 'Estratégia Operacional (Projetos)',
-      icon: '🏢',
-      services: [
-        {
-          name: 'Projeto sob demanda',
-          description: 'Escopo personalizado conforme a necessidade da empresa. Entre em contato para desenharmos juntos a melhor solução.',
-          price: 'A consultar',
-        },
-      ]
+      title: 'Dashboards Financeiros',
+      description: 'Criação de painéis personalizados em Power BI, Excel e Google Sheets.',
+      bullets: ['Faturamento', 'Lucro', 'Custos', 'Margem', 'Inadimplência', 'Fluxo de caixa']
     },
+    {
+      title: 'Análise de Dados',
+      description: 'Uso de Python, SQL e Excel para encontrar oportunidades de redução de custos e ganho de lucratividade.',
+      bullets: ['Análise estratégica', 'Indicadores', 'Otimização', 'Relatórios claros']
+    }
   ];
+
+  const processSteps = [
+    {
+      title: '1. Diagnóstico',
+      description: 'Entendo a realidade da empresa e identifico os principais pontos de atenção.'
+    },
+    {
+      title: '2. Planejamento',
+      description: 'Defino prioridades, metas e os indicadores mais relevantes para o negócio.'
+    },
+    {
+      title: '3. Implementação',
+      description: 'Implanto controles, dashboards e processos com foco em objetividade e resultado.'
+    },
+    {
+      title: '4. Acompanhamento',
+      description: 'Monitoro resultados e proponho melhorias contínuas para sustentar o crescimento.'
+    }
+  ];
+
+  const projects = [
+    {
+      title: 'Dashboard Financeiro',
+      description: 'Controle de receitas, despesas, fluxo de caixa e indicadores financeiros em um painel visual e prático.',
+      items: ['Receitas e despesas', 'Fluxo de caixa', 'Indicadores financeiros']
+    },
+    {
+      title: 'Dashboard Comercial',
+      description: 'Acompanhamento de vendas, ticket médio, clientes e conversão com foco em decisão estratégica.',
+      items: ['Vendas', 'Ticket médio', 'Clientes', 'Conversão']
+    },
+    {
+      title: 'Controle Financeiro em Excel',
+      description: 'Planilha desenvolvida para pequenas empresas com contas a pagar, contas a receber e indicadores automáticos.',
+      items: ['Contas a pagar', 'Contas a receber', 'Fluxo de caixa']
+    }
+  ];
+
+  const technologies = ['Power BI', 'Excel Avançado', 'Power Query', 'Python', 'SQL', 'VBA', 'Google Sheets'];
+  const differentiators = ['Atendimento personalizado', 'Soluções práticas', 'Linguagem simples', 'Experiência com pequenas empresas', 'Integração entre finanças e dados', 'Dashboards personalizados'];
 
   const faqItems = [
     {
-      q: 'Como funciona o processo de consultoria?',
-      a: 'Começamos com uma conversa diagnóstica para entender seu momento financeiro. A partir daí, traçamos um plano personalizado — seja para organização pessoal, MEI ou empresa — com etapas claras e prazos definidos.'
+      q: 'Você atende empresas de qualquer tamanho?',
+      a: 'Atendo principalmente MEIs, microempresas, pequenas empresas e profissionais autônomos.'
     },
     {
-      q: 'Posso contratar apenas um serviço ou preciso de um pacote?',
-      a: 'Cada serviço pode ser contratado individualmente. Recomendamos começar pelo diagnóstico, mas você escolhe o que faz mais sentido para o seu momento.'
+      q: 'As consultorias podem ser online?',
+      a: 'Sim. Todo o atendimento pode ser realizado remotamente, com mais praticidade e flexibilidade.'
     },
     {
-      q: 'Com quem a Dalumia trabalha?',
-      a: 'Atendemos pessoas físicas, MEI e pequenas empresas que querem organizar as finanças, crescer com segurança ou tomar decisões mais embasadas em dados.'
+      q: 'Você desenvolve dashboards personalizados?',
+      a: 'Sim. Cada painel é criado de acordo com as necessidades do cliente e com foco em clareza e tomada de decisão.'
     },
     {
-      q: 'Qual o prazo típico de um projeto?',
-      a: 'Diagnóstico: 1 a 2 semanas. Planejamento e estruturação: 2 a 4 semanas. O acompanhamento mensal recorrente é contínuo e renovável a cada período.'
-    },
-    {
-      q: 'As reuniões são online ou presenciais?',
-      a: 'Trabalhamos principalmente online (Google Meet / Zoom), o que nos permite atender clientes em todo o Brasil. Presencial em São Paulo mediante agendamento.'
-    },
-    {
-      q: 'Os valores informados são fixos?',
-      a: 'Os valores apresentados são faixas de referência. O valor exato depende do escopo e da complexidade do seu caso. Entre em contato para um orçamento personalizado sem compromisso.'
-    },
-  ];
-
-  const blogPosts = [
-    {
-      title: 'Como separar finanças pessoais e do negócio sendo MEI',
-      excerpt: 'Um dos erros mais comuns do microempreendedor é misturar as contas. Veja como estruturar isso de forma simples e prática.',
-      date: 'Jun 2026'
-    },
-    {
-      title: 'DRE Gerencial: o que é e por que sua empresa precisa',
-      excerpt: 'O Demonstrativo de Resultado do Exercício gerencial revela a saúde real do seu negócio. Aprenda a ler e usar a seu favor.',
-      date: 'Mai 2026'
-    },
-    {
-      title: 'Fluxo de caixa: como projetar os próximos 3 meses',
-      excerpt: 'Antecipar entradas e saídas evita surpresas e permite decisões mais seguras. Veja um modelo prático para começar hoje.',
-      date: 'Abr 2026'
+      q: 'Como funciona o processo de trabalho?',
+      a: 'Começo com um diagnóstico, sigo para o planejamento, implementação e, em seguida, acompanho os resultados com apoio contínuo.'
     }
   ];
 
   return (
-    <div style={{ fontFamily: 'Inter, -apple-system, sans-serif', color: '#0F1419' }}>
-      {/* Navbar */}
+    <div style={{ fontFamily: 'Inter, Poppins, -apple-system, sans-serif', color: '#0F172A', backgroundColor: '#F8FAFC' }}>
       <nav style={{
-        background: '#0F1419',
+        background: 'linear-gradient(90deg, #1E3A8A 0%, #2563EB 100%)',
         color: '#FFFFFF',
         padding: '1rem 2rem',
         display: 'flex',
@@ -155,26 +115,18 @@ export default function DalumiaWebsite() {
         position: 'sticky',
         top: 0,
         zIndex: 100,
-        boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+        boxShadow: '0 2px 10px rgba(0,0,0,0.15)'
       }}>
-        <div style={{ fontSize: '1.5rem', fontWeight: 'bold', letterSpacing: '2px' }}>
-          DALUMIA
+        <div style={{ fontSize: '1.35rem', fontWeight: '700', letterSpacing: '1px' }}>
+          SARA OLIVEIRA
         </div>
-        
+
         <div className="desktop-menu" style={{ alignItems: 'center' }}>
-          <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-            <a href="#servicos" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '0.95rem' }}>Serviços</a>
+          <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
             <a href="#sobre" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '0.95rem' }}>Sobre</a>
-            <a href="#blog" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '0.95rem' }}>Blog</a>
-            <a href="#faq" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '0.95rem' }}>FAQ</a>
-            <a href="#contato" style={{
-              background: '#D4AF37',
-              color: '#0F1419',
-              padding: '0.5rem 1.5rem',
-              borderRadius: '4px',
-              textDecoration: 'none',
-              fontWeight: '500'
-            }}>Contato</a>
+            <a href="#servicos" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '0.95rem' }}>Serviços</a>
+            <a href="#como-funciona" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '0.95rem' }}>Como funciona</a>
+            <a href="#contato" style={{ color: '#FFFFFF', textDecoration: 'none', fontSize: '0.95rem' }}>Contato</a>
           </div>
         </div>
 
@@ -186,556 +138,176 @@ export default function DalumiaWebsite() {
             border: 'none',
             color: '#FFFFFF',
             cursor: 'pointer',
-            fontSize: '1.5rem'
+            fontSize: '1.4rem'
           }}
         >
-          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </nav>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div style={{
-          background: '#0F1419',
-          color: '#FFFFFF',
-          padding: '1rem 2rem',
-          borderBottom: '1px solid #D4AF37'
-        }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <a href="#servicos" style={{ color: '#FFFFFF', textDecoration: 'none' }}>Serviços</a>
-            <a href="#sobre" style={{ color: '#FFFFFF', textDecoration: 'none' }}>Sobre</a>
-            <a href="#blog" style={{ color: '#FFFFFF', textDecoration: 'none' }}>Blog</a>
-            <a href="#faq" style={{ color: '#FFFFFF', textDecoration: 'none' }}>FAQ</a>
-            <a href="#contato" style={{
-              background: '#D4AF37',
-              color: '#0F1419',
-              padding: '0.5rem 1rem',
-              borderRadius: '4px',
-              textDecoration: 'none',
-              fontWeight: '500',
-              textAlign: 'center'
-            }}>Contato</a>
-          </div>
+        <div style={{ background: '#1E3A8A', padding: '1rem 2rem', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+          <a href="#sobre" style={{ color: '#FFFFFF', textDecoration: 'none' }}>Sobre</a>
+          <a href="#servicos" style={{ color: '#FFFFFF', textDecoration: 'none' }}>Serviços</a>
+          <a href="#como-funciona" style={{ color: '#FFFFFF', textDecoration: 'none' }}>Como funciona</a>
+          <a href="#contato" style={{ color: '#FFFFFF', textDecoration: 'none' }}>Contato</a>
         </div>
       )}
 
-      {/* Hero */}
-      <section style={{
-        background: 'linear-gradient(135deg, #0F1419 0%, #1a1f2e 100%)',
-        color: '#FFFFFF',
-        padding: '6rem 2rem',
-        textAlign: 'center',
-        borderBottom: '3px solid #D4AF37'
-      }}>
-        <h1 style={{
-          fontSize: '3rem',
-          fontWeight: '700',
-          marginBottom: '1rem',
-          letterSpacing: '-1px'
-        }}>
-          Dados que Fazem <span style={{ color: '#D4AF37' }}>Diferença</span>
+      <section style={{ background: 'linear-gradient(135deg, #1E3A8A 0%, #0F172A 100%)', color: '#FFFFFF', padding: '5rem 2rem', textAlign: 'center' }}>
+        <p style={{ fontSize: '0.9rem', letterSpacing: '0.25rem', textTransform: 'uppercase', marginBottom: '1rem', color: '#BFDBFE' }}>Consultora Financeira e Analista de Dados</p>
+        <h1 style={{ fontSize: '2.3rem', lineHeight: '1.2', marginBottom: '1rem', fontWeight: '700' }}>
+          Sara Oliveira Guimarães Nascimento
         </h1>
-        <p style={{
-          fontSize: '0.9rem',
-          fontWeight: '600',
-          letterSpacing: '2px',
-          color: '#D4AF37',
-          textTransform: 'uppercase',
-          marginBottom: '1rem'
-        }}>
-          Consultoria Financeira & Estratégia Operacional
-        </p>
-        <p style={{
-          fontSize: '1.2rem',
-          maxWidth: '600px',
-          margin: '0 auto 2rem',
-          lineHeight: '1.7',
-          color: '#E8E8E8'
-        }}>
-          Para pessoas físicas, MEI e pequenas empresas que querem organizar as finanças e crescer com decisões baseadas em dados.
+        <p style={{ fontSize: '1.1rem', maxWidth: '720px', margin: '0 auto 2rem', lineHeight: '1.7', color: '#E2E8F0' }}>
+          Transformo informações financeiras em decisões estratégicas para pequenas e médias empresas, organizando processos, controlando indicadores e apoiando a gestão com clareza.
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="#servicos" style={{
-            background: '#D4AF37',
-            color: '#0F1419',
-            padding: '1rem 2rem',
-            borderRadius: '4px',
-            textDecoration: 'none',
-            fontWeight: '600',
-            fontSize: '1rem'
-          }}>Explorar Serviços</a>
-          <a href="#contato" style={{
-            background: 'transparent',
-            color: '#FFFFFF',
-            padding: '1rem 2rem',
-            borderRadius: '4px',
-            textDecoration: 'none',
-            border: '2px solid #D4AF37',
-            fontWeight: '600',
-            fontSize: '1rem'
-          }}>Falar com Time</a>
+          <a href="#contato" style={{ background: '#10B981', color: '#FFFFFF', padding: '0.9rem 1.5rem', borderRadius: '999px', textDecoration: 'none', fontWeight: '600' }}>Agendar uma consultoria</a>
+          <a href="#contato" style={{ background: 'transparent', border: '2px solid #FFFFFF', color: '#FFFFFF', padding: '0.9rem 1.5rem', borderRadius: '999px', textDecoration: 'none', fontWeight: '600' }}>Solicitar diagnóstico gratuito</a>
+          <a href="https://wa.me/5511999999999" target="_blank" rel="noreferrer" style={{ background: '#FFFFFF', color: '#1E3A8A', padding: '0.9rem 1.5rem', borderRadius: '999px', textDecoration: 'none', fontWeight: '600' }}>Falar pelo WhatsApp</a>
         </div>
       </section>
 
-      {/* Serviços */}
-      <section id="servicos" style={{ padding: '5rem 2rem', background: '#F8FAFC' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 style={{
-            fontSize: '2.5rem',
-            fontWeight: '700',
-            textAlign: 'center',
-            marginBottom: '0.75rem',
-            color: '#0F1419'
-          }}>Nossos Serviços</h2>
-          <p style={{
-            textAlign: 'center',
-            color: '#666',
-            fontSize: '1rem',
-            marginBottom: '4rem'
-          }}>Escolha o serviço ideal para o seu momento</p>
-
-          {serviceCategories.map((cat, catIdx) => (
-            <div key={catIdx} style={{ marginBottom: '4rem' }}>
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.75rem',
-                marginBottom: '1.75rem',
-                paddingBottom: '0.75rem',
-                borderBottom: '2px solid #D4AF37'
-              }}>
-                <span style={{ fontSize: '1.75rem' }}>{cat.icon}</span>
-                <h3 style={{
-                  fontSize: '1.35rem',
-                  fontWeight: '700',
-                  color: '#0F1419',
-                  margin: 0
-                }}>{cat.category}</h3>
-              </div>
-
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
-                gap: '1.5rem'
-              }}>
-                {cat.services.map((service, sIdx) => (
-                  <div key={sIdx} style={{
-                    background: '#FFFFFF',
-                    borderRadius: '12px',
-                    padding: '1.75rem',
-                    boxShadow: '0 2px 12px rgba(0,0,0,0.07)',
-                    border: '1px solid #E8E8E8',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    transition: 'transform 0.2s, box-shadow 0.2s'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-4px)';
-                    e.currentTarget.style.boxShadow = '0 8px 24px rgba(212,175,55,0.18)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,0,0,0.07)';
-                  }}
-                  >
-                    <div>
-                      <h4 style={{
-                        fontSize: '1.05rem',
-                        fontWeight: '700',
-                        color: '#0F1419',
-                        marginBottom: '0.75rem',
-                        lineHeight: '1.4'
-                      }}>{service.name}</h4>
-                      <p style={{
-                        fontSize: '0.88rem',
-                        color: '#666',
-                        lineHeight: '1.6',
-                        marginBottom: '1.5rem'
-                      }}>{service.description}</p>
-                    </div>
-
-                    <div>
-                      <div style={{
-                        background: '#F8FAFC',
-                        borderRadius: '8px',
-                        padding: '0.75rem 1rem',
-                        marginBottom: '1rem',
-                        textAlign: 'center'
-                      }}>
-                        <span style={{
-                          fontSize: '1.25rem',
-                          fontWeight: '800',
-                          color: '#D4AF37',
-                          letterSpacing: '-0.5px'
-                        }}>{service.price}</span>
-                      </div>
-                      <a
-                        href="#contato"
-                        style={{
-                          display: 'block',
-                          textAlign: 'center',
-                          background: '#0F1419',
-                          color: '#D4AF37',
-                          padding: '0.65rem 1rem',
-                          borderRadius: '6px',
-                          textDecoration: 'none',
-                          fontWeight: '600',
-                          fontSize: '0.9rem',
-                          transition: 'background 0.2s'
-                        }}
-                        onMouseEnter={(e) => e.currentTarget.style.background = '#D4AF37'}
-                        onMouseLeave={(e) => e.currentTarget.style.background = '#0F1419'}
-                      >
-                        Solicitar serviço
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Sobre */}
-      <section id="sobre" style={{
-        padding: '5rem 2rem',
-        background: '#FFFFFF'
-      }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-          <h2 style={{
-            fontSize: '2.5rem',
-            fontWeight: '700',
-            marginBottom: '1rem',
-            color: '#0F1419'
-          }}>Sobre a Dalumia</h2>
-
-          <p style={{
-            fontSize: '1.05rem',
-            lineHeight: '1.8',
-            color: '#555',
-            marginBottom: '2.5rem',
-            maxWidth: '700px'
-          }}>
-            Nascemos da convicção de que toda empresa merece acesso a decisões inteligentes baseadas em dados. Combinamos formação contábil, MBA em Data Science & Analytics e vivência profunda com empreendedores de verdade para entregar consultoria financeira que é acessível, clara e eficaz.
-          </p>
-
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '1.5rem',
-            marginBottom: '3rem'
-          }}>
-            <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px', borderLeft: '3px solid #D4AF37' }}>
-              <h3 style={{ color: '#D4AF37', fontSize: '1.05rem', fontWeight: '700', marginBottom: '0.5rem' }}>🎓 Formação</h3>
-              <p style={{ fontSize: '0.93rem', lineHeight: '1.7', color: '#555', margin: 0 }}>
-                Administração · MBA em Data Science & Analytics · cursando Contabilidade. Visão integrada de negócio, dados e finanças.
-              </p>
-            </div>
-            <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px', borderLeft: '3px solid #D4AF37' }}>
-              <h3 style={{ color: '#D4AF37', fontSize: '1.05rem', fontWeight: '700', marginBottom: '0.5rem' }}>💼 Experiência</h3>
-              <p style={{ fontSize: '0.93rem', lineHeight: '1.7', color: '#555', margin: 0 }}>
-                Profissional em análise de dados e consultoria financeira com 3+ anos de experiência prática. Histórico em projetos de BI e análise financeira, combinado com atendimento direto a microempreendedores na formalização, gestão tributária e planejamento. Vivência com a realidade operacional: desde constituição até estratégia fiscal com fluxo de caixa restrito.
-              </p>
-            </div>
-            <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px', borderLeft: '3px solid #D4AF37' }}>
-              <h3 style={{ color: '#D4AF37', fontSize: '1.05rem', fontWeight: '700', marginBottom: '0.5rem' }}>✨ Diferenciais</h3>
-              <p style={{ fontSize: '0.93rem', lineHeight: '1.7', color: '#555', margin: 0 }}>
-                Combinação rara de dados + contabilidade + negócio. Ferramentas acessíveis (Excel, Python, Power BI) sem complexidade desnecessária. Suporte real pós-projeto.
-              </p>
-            </div>
-            <div style={{ padding: '1.5rem', background: '#F8FAFC', borderRadius: '8px', borderLeft: '3px solid #D4AF37' }}>
-              <h3 style={{ color: '#D4AF37', fontSize: '1.05rem', fontWeight: '700', marginBottom: '0.5rem' }}>📍 Atendimento</h3>
-              <p style={{ fontSize: '0.93rem', lineHeight: '1.7', color: '#555', margin: 0 }}>
-                <strong>Presencial em São Paulo · Online para todo o Brasil.</strong> Atendimento por Google Meet, Zoom ou Microsoft Teams, com flexibilidade de horário para se adaptar ao seu negócio.
-              </p>
-            </div>
-          </div>
-
-          <div style={{
-            background: '#D4AF37',
-            color: '#0F1419',
-            padding: '2rem',
-            borderRadius: '8px',
-            textAlign: 'center'
-          }}>
-            <p style={{ fontSize: '1.1rem', margin: '0 0 1rem 0', fontWeight: '500' }}>
-              Pronto para crescer com quem entende de negócio e de dados?
-            </p>
-            <a href="#contato" style={{
-              background: '#0F1419',
-              color: '#D4AF37',
-              padding: '0.75rem 2rem',
-              borderRadius: '4px',
-              textDecoration: 'none',
-              fontWeight: '600',
-              display: 'inline-block'
-            }}>Agende uma Conversa</a>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section id="faq" style={{
-        padding: '5rem 2rem',
-        background: '#F8FAFC'
-      }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h2 style={{
-            fontSize: '2.5rem',
-            fontWeight: '700',
-            textAlign: 'center',
-            marginBottom: '3rem',
-            color: '#0F1419'
-          }}>Perguntas Frequentes</h2>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            {faqItems.map((item, idx) => (
-              <div key={idx} style={{
-                background: '#FFFFFF',
-                borderRadius: '8px',
-                border: '1px solid #E0E0E0',
-                overflow: 'hidden'
-              }}>
-                <button
-                  onClick={() => toggleFAQ(idx)}
-                  style={{
-                    width: '100%',
-                    padding: '1.5rem',
-                    border: 'none',
-                    background: '#FFFFFF',
-                    cursor: 'pointer',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    fontSize: '1rem',
-                    fontWeight: '600',
-                    color: '#0F1419',
-                    textAlign: 'left'
-                  }}
-                >
-                  {item.q}
-                  <ChevronDown
-                    size={20}
-                    style={{
-                      transition: 'transform 0.3s',
-                      transform: expandedFAQ === idx ? 'rotate(180deg)' : 'rotate(0)'
-                    }}
-                  />
-                </button>
-                {expandedFAQ === idx && (
-                  <div style={{
-                    padding: '0 1.5rem 1.5rem',
-                    borderTop: '1px solid #E0E0E0',
-                    color: '#555',
-                    lineHeight: '1.6',
-                    fontSize: '0.95rem'
-                  }}>
-                    {item.a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Preview */}
-      <section id="blog" style={{
-        padding: '5rem 2rem',
-        background: '#FFFFFF'
-      }}>
+      <section id="sobre" style={{ padding: '5rem 2rem', background: '#FFFFFF' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <h2 style={{
-            fontSize: '2.5rem',
-            fontWeight: '700',
-            marginBottom: '0.75rem',
-            color: '#0F1419'
-          }}>Blog & Conteúdo</h2>
-          <p style={{ color: '#666', fontSize: '1rem', marginBottom: '3rem' }}>
-            Dicas práticas de finanças para quem tem um negócio ou quer organizar a vida financeira.
+          <h2 style={{ fontSize: '2.2rem', fontWeight: '700', marginBottom: '1rem', color: '#1E3A8A' }}>Quem sou</h2>
+          <p style={{ fontSize: '1.02rem', lineHeight: '1.8', color: '#475569', marginBottom: '2rem' }}>
+            Sou consultora financeira e analista de dados com experiência em administração financeira, análise de indicadores, controle operacional e inteligência de negócios. Minha atuação combina Administração, Ciências Contábeis e Data Analytics para oferecer soluções práticas que melhoram a gestão financeira e aumentam a eficiência das empresas.
           </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}>
+            <div style={{ padding: '1.25rem', background: '#F8FAFC', borderRadius: '12px', borderLeft: '4px solid #10B981' }}>
+              <h3 style={{ margin: '0 0 0.5rem', color: '#0F172A' }}>Formação</h3>
+              <p style={{ margin: 0, color: '#475569', lineHeight: '1.6' }}>MBA em Data Science & Analytics (USP ESALQ), Ciências Contábeis e Administração.</p>
+            </div>
+            <div style={{ padding: '1.25rem', background: '#F8FAFC', borderRadius: '12px', borderLeft: '4px solid #10B981' }}>
+              <h3 style={{ margin: '0 0 0.5rem', color: '#0F172A' }}>Atendimento</h3>
+              <p style={{ margin: 0, color: '#475569', lineHeight: '1.6' }}>Atuo com orientação a microempreendedores e gestão administrativa, com soluções voltadas à organização financeira.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '2rem'
-          }}>
-            {blogPosts.map((post, idx) => (
-              <div key={idx} style={{
-                padding: '1.5rem',
-                background: '#F8FAFC',
-                borderRadius: '8px',
-                cursor: 'pointer',
-                transition: 'transform 0.3s',
-                border: '1px solid #E0E0E0'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
-              onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
-              >
-                <p style={{
-                  fontSize: '0.85rem',
-                  color: '#D4AF37',
-                  fontWeight: '600',
-                  margin: '0 0 0.5rem 0'
-                }}>{post.date}</p>
-                <h3 style={{
-                  fontSize: '1.1rem',
-                  fontWeight: '600',
-                  marginBottom: '0.75rem',
-                  color: '#0F1419'
-                }}>{post.title}</h3>
-                <p style={{
-                  fontSize: '0.9rem',
-                  color: '#666',
-                  margin: 0,
-                  lineHeight: '1.5'
-                }}>{post.excerpt}</p>
+      <section id="servicos" style={{ padding: '5rem 2rem', background: '#F8FAFC' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '2.2rem', fontWeight: '700', textAlign: 'center', marginBottom: '0.75rem', color: '#1E3A8A' }}>Serviços</h2>
+          <p style={{ textAlign: 'center', color: '#64748B', marginBottom: '3rem' }}>Soluções financeiras e analíticas para empresas que querem crescer com mais organização e controle.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}>
+            {services.map((service, index) => (
+              <div key={index} style={{ background: '#FFFFFF', borderRadius: '16px', padding: '1.5rem', boxShadow: '0 10px 25px rgba(15,23,42,0.06)', border: '1px solid #E2E8F0' }}>
+                <h3 style={{ marginBottom: '0.5rem', color: '#1E3A8A' }}>{service.title}</h3>
+                <p style={{ color: '#64748B', lineHeight: '1.6', marginBottom: '1rem' }}>{service.description}</p>
+                <ul style={{ paddingLeft: '1rem', margin: 0, color: '#0F172A', lineHeight: '1.7' }}>
+                  {service.bullets.map((item, itemIndex) => <li key={itemIndex}>{item}</li>)}
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contato */}
-      <section id="contato" style={{
-        padding: '5rem 2rem',
-        background: '#0F1419',
-        color: '#FFFFFF'
-      }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h2 style={{
-            fontSize: '2.5rem',
-            fontWeight: '700',
-            marginBottom: '1rem',
-            textAlign: 'center'
-          }}>Vamos Conversar</h2>
-          <p style={{
-            fontSize: '1.1rem',
-            textAlign: 'center',
-            marginBottom: '3rem',
-            color: '#E8E8E8'
-          }}>
-            Envie uma mensagem e entraremos em contato em até 24h
-          </p>
+      <section id="como-funciona" style={{ padding: '5rem 2rem', background: '#FFFFFF' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '2.2rem', fontWeight: '700', marginBottom: '0.75rem', color: '#1E3A8A' }}>Como funciona</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginTop: '2rem' }}>
+            {processSteps.map((step, index) => (
+              <div key={index} style={{ background: '#F8FAFC', borderRadius: '12px', padding: '1.25rem', border: '1px solid #E2E8F0' }}>
+                <h3 style={{ color: '#10B981', marginBottom: '0.5rem' }}>{step.title}</h3>
+                <p style={{ color: '#475569', lineHeight: '1.6', margin: 0 }}>{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <form onSubmit={handleContactSubmit} style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '1rem'
-          }}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Seu Nome"
-              value={contactForm.name}
-              onChange={handleContactChange}
-              required
-              style={{
-                padding: '1rem',
-                borderRadius: '4px',
-                border: '1px solid #D4AF37',
-                background: '#1a1f2e',
-                color: '#FFFFFF',
-                fontSize: '1rem'
-              }}
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Seu Email"
-              value={contactForm.email}
-              onChange={handleContactChange}
-              required
-              style={{
-                padding: '1rem',
-                borderRadius: '4px',
-                border: '1px solid #D4AF37',
-                background: '#1a1f2e',
-                color: '#FFFFFF',
-                fontSize: '1rem'
-              }}
-            />
-            <textarea
-              name="message"
-              placeholder="Sua Mensagem"
-              value={contactForm.message}
-              onChange={handleContactChange}
-              required
-              rows="5"
-              style={{
-                padding: '1rem',
-                borderRadius: '4px',
-                border: '1px solid #D4AF37',
-                background: '#1a1f2e',
-                color: '#FFFFFF',
-                fontSize: '1rem',
-                fontFamily: 'inherit'
-              }}
-            ></textarea>
-            <button
-              type="submit"
-              style={{
-                padding: '1rem',
-                background: '#D4AF37',
-                color: '#0F1419',
-                border: 'none',
-                borderRadius: '4px',
-                fontSize: '1rem',
-                fontWeight: '600',
-                cursor: 'pointer'
-              }}
-            >
-              Enviar Mensagem
-            </button>
+      <section style={{ padding: '5rem 2rem', background: '#F8FAFC' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '2.2rem', fontWeight: '700', marginBottom: '0.75rem', color: '#1E3A8A' }}>Projetos</h2>
+          <p style={{ color: '#64748B', marginBottom: '2rem' }}>Exemplos de soluções que podem ser adaptadas à realidade do seu negócio.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
+            {projects.map((project, index) => (
+              <div key={index} style={{ background: '#FFFFFF', borderRadius: '16px', padding: '1.5rem', border: '1px solid #E2E8F0' }}>
+                <h3 style={{ color: '#0F172A', marginBottom: '0.5rem' }}>{project.title}</h3>
+                <p style={{ color: '#64748B', lineHeight: '1.6', marginBottom: '0.75rem' }}>{project.description}</p>
+                <ul style={{ paddingLeft: '1rem', margin: 0, color: '#0F172A', lineHeight: '1.7' }}>
+                  {project.items.map((item, itemIndex) => <li key={itemIndex}>{item}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: '5rem 2rem', background: '#FFFFFF' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '2.2rem', fontWeight: '700', marginBottom: '0.75rem', color: '#1E3A8A' }}>Tecnologias</h2>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginTop: '1.5rem' }}>
+            {technologies.map((tech, index) => (
+              <span key={index} style={{ padding: '0.7rem 1rem', background: '#EFF6FF', color: '#1E3A8A', borderRadius: '999px', fontWeight: '600' }}>{tech}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: '5rem 2rem', background: '#F8FAFC' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '2.2rem', fontWeight: '700', marginBottom: '0.75rem', color: '#1E3A8A' }}>Diferenciais</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+            {differentiators.map((item, index) => (
+              <div key={index} style={{ padding: '1rem 1.1rem', background: '#FFFFFF', borderRadius: '12px', border: '1px solid #E2E8F0', color: '#0F172A' }}>{item}</div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" style={{ padding: '5rem 2rem', background: '#FFFFFF' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '2.2rem', fontWeight: '700', marginBottom: '2rem', textAlign: 'center', color: '#1E3A8A' }}>Perguntas frequentes</h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            {faqItems.map((item, index) => (
+              <div key={index} style={{ border: '1px solid #E2E8F0', borderRadius: '12px', overflow: 'hidden', background: '#F8FAFC' }}>
+                <button onClick={() => toggleFAQ(index)} style={{ width: '100%', background: 'transparent', border: 'none', padding: '1rem 1.2rem', textAlign: 'left', cursor: 'pointer', fontWeight: '600', color: '#0F172A', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  {item.q}
+                  <ChevronDown size={18} style={{ transform: expandedFAQ === index ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
+                </button>
+                {expandedFAQ === index && <div style={{ padding: '0 1.2rem 1rem', color: '#475569', lineHeight: '1.7' }}>{item.a}</div>}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" style={{ padding: '5rem 2rem', background: 'linear-gradient(135deg, #1E3A8A 0%, #0F172A 100%)', color: '#FFFFFF' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '2.2rem', fontWeight: '700', textAlign: 'center', marginBottom: '0.75rem' }}>Vamos conversar</h2>
+          <p style={{ textAlign: 'center', color: '#E2E8F0', marginBottom: '2rem' }}>Envie uma mensagem e retorno em breve para discutir sua necessidade.</p>
+
+          <form onSubmit={handleContactSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <input type="text" name="name" placeholder="Seu nome" value={contactForm.name} onChange={handleContactChange} required style={{ padding: '0.95rem 1rem', borderRadius: '10px', border: '1px solid #93C5FD', background: '#FFFFFF', color: '#0F172A' }} />
+            <input type="email" name="email" placeholder="Seu e-mail" value={contactForm.email} onChange={handleContactChange} required style={{ padding: '0.95rem 1rem', borderRadius: '10px', border: '1px solid #93C5FD', background: '#FFFFFF', color: '#0F172A' }} />
+            <textarea name="message" placeholder="Sua mensagem" value={contactForm.message} onChange={handleContactChange} required rows="5" style={{ padding: '0.95rem 1rem', borderRadius: '10px', border: '1px solid #93C5FD', background: '#FFFFFF', color: '#0F172A', fontFamily: 'inherit' }} />
+            <button type="submit" style={{ padding: '0.95rem 1rem', borderRadius: '10px', border: 'none', background: '#10B981', color: '#FFFFFF', fontWeight: '700', cursor: 'pointer' }}>Enviar mensagem</button>
           </form>
 
-          <div style={{
-            marginTop: '3rem',
-            paddingTop: '2rem',
-            borderTop: '1px solid #D4AF37',
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: '2rem',
-            textAlign: 'center'
-          }}>
+          <div style={{ marginTop: '2rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', textAlign: 'center' }}>
             <div>
-              <Mail size={28} style={{ marginBottom: '0.5rem' }} />
-              <p style={{ fontSize: '0.9rem', color: '#E8E8E8', margin: 0 }}>
-                contato@dalumia.com.br
-              </p>
+              <Mail size={20} style={{ marginBottom: '0.4rem' }} />
+              <p style={{ margin: 0, color: '#E2E8F0' }}>saraog262@proton.me</p>
             </div>
             <div>
-              <MapPin size={28} style={{ marginBottom: '0.5rem' }} />
-              <p style={{ fontSize: '0.9rem', color: '#E8E8E8', margin: 0 }}>
-                São Paulo, SP
-              </p>
+              <MapPin size={20} style={{ marginBottom: '0.4rem' }} />
+              <p style={{ margin: 0, color: '#E2E8F0' }}>São Paulo – SP</p>
             </div>
             <div>
-              <Phone size={28} style={{ marginBottom: '0.5rem' }} />
-              <p style={{ fontSize: '0.9rem', color: '#E8E8E8', margin: 0 }}>
-                +55 (11) 99XXX-XXXX
-              </p>
+              <Phone size={20} style={{ marginBottom: '0.4rem' }} />
+              <p style={{ margin: 0, color: '#E2E8F0' }}>WhatsApp disponível</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer style={{
-        background: '#0A0D12',
-        color: '#FFFFFF',
-        textAlign: 'center',
-        padding: '2rem',
-        fontSize: '0.85rem'
-      }}>
-        <p style={{ margin: '0.5rem 0' }}>
-          © 2026 Dalumia Consultoria. Todos os direitos reservados.
-        </p>
-        <p style={{ margin: '0.5rem 0', color: '#D4AF37' }}>
-          Consultoria Financeira & Estratégia Operacional
-        </p>
+      <footer style={{ background: '#0F172A', color: '#FFFFFF', textAlign: 'center', padding: '1.5rem 2rem' }}>
+        <p style={{ margin: 0 }}>© 2026 Sara Oliveira Guimarães Nascimento</p>
       </footer>
     </div>
   );
