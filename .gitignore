@@ -1,0 +1,4 @@
+files/node_modules/
+files/build/
+.DS_Store
+*.log
